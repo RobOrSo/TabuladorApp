@@ -33,7 +33,7 @@ button{font-family:inherit;border:none;background:none;color:inherit;cursor:poin
 input,select,textarea{font-family:inherit;color:inherit;background:none;border:none;outline:none;}
 
 /* ── LOGIN ── */
-.login{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;padding:32px 28px 28px;}
+.login{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;padding:calc(32px + env(safe-area-inset-top)) 28px calc(28px + env(safe-area-inset-bottom));}
 .lg-brand{display:flex;align-items:center;gap:10px;}
 .lg-mark{width:28px;height:28px;background:var(--accent);border-radius:7px;display:grid;place-items:center;font-family:var(--mono);font-weight:600;color:#0c0d10;font-size:14px;}
 .lg-name{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase;}
@@ -60,7 +60,7 @@ input,select,textarea{font-family:inherit;color:inherit;background:none;border:n
 .page.on{display:flex;}
 
 /* ── HEADER ── */
-.hd{padding:18px 22px 16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:5;}
+.hd{padding:calc(18px + env(safe-area-inset-top)) 22px 16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:5;}
 .hd-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
 .hd-eyebrow{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase;}
 .hd-title{font-size:28px;font-weight:500;letter-spacing:-.02em;line-height:1.05;margin-top:4px;}
@@ -136,7 +136,7 @@ input,select,textarea{font-family:inherit;color:inherit;background:none;border:n
 .bn-i .bn-l{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;}
 
 /* ── DETAIL ── */
-.dt-back{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;}
+.dt-back{display:flex;align-items:center;justify-content:space-between;padding:calc(12px + env(safe-area-inset-top)) 18px 12px;}
 .dt-body{padding:0 18px 24px;}
 .dt-eyebrow{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px;}
 .dt-title{font-size:30px;font-weight:500;letter-spacing:-.02em;line-height:1.05;}
@@ -168,7 +168,7 @@ input,select,textarea{font-family:inherit;color:inherit;background:none;border:n
 .action-btn.danger .ic{background:rgba(201,128,128,.15);color:var(--bad);}
 
 /* ── EDIT FORM ── */
-.ed-hd{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid var(--border);}
+.ed-hd{display:flex;align-items:center;justify-content:space-between;padding:calc(12px + env(safe-area-inset-top)) 18px 12px;border-bottom:1px solid var(--border);}
 .ed-save{height:32px;padding:0 14px;border-radius:99px;background:var(--accent);color:#0c0d10;font-weight:600;font-size:12px;}
 .ed-body{padding:18px;}
 .ed-grid{display:grid;grid-template-columns:1fr 110px;gap:10px;margin-top:14px;}
